@@ -1,9 +1,11 @@
+const credentials = require("./credentials.js");
+
 module.exports = {
-    HOST: "localhost",
-    USER: "root",
-    PASSWORD: "123456",
-    DB: "testdb",
-    dialect: "mysql",
+    HOST: credentials.HOST,
+    USER: credentials.USER,
+    PASSWORD: credentials.PASSWORD,
+    DB: credentials.DB,
+    dialect: credentials.dialect,
     pool: {
         max: 5,
         min: 0,
