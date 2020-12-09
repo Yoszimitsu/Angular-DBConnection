@@ -1,0 +1,19 @@
+{
+  "name": "angular-dbconnection",
+  "version": "1.0.0",
+  "description": "Connection Angular framework with SQL database by Express server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yoszimitsu/Angular-DBConnection.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yoszimitsu/Angular-DBConnection/issues"
+  },
+  "homepage": "https://github.com/Yoszimitsu/Angular-DBConnection#readme"
+}
