@@ -19,7 +19,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.uids = require("./app.model.js")(sequelize, Sequelize);
+db.app = require("./app.model.js")(sequelize, Sequelize);
 
 module.exports = db;
 
