@@ -1,0 +1,41 @@
+version: '3'
+services:
+
+  uid-db:
+    image: mysql:8.0.12
+    container_name: uid-db-mysql
+    volumes:
+      - app-data:/var/lib/mysql/data
+    restart: always
+    ports:
+      - 3360:3360
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+
+  uid-app:
+    build: ./app
+    container_name: uid-app
+    environment:
+      - DB_SERVER=ui-db
+    ports:
+      - 8081:8081
+    links:
+      - uid-db
+
+  uid-ui:
+    build: ./ui-app
+    container_name: uid-ui
+    ports:
+      - 4200:8081
+    deploy:
+      mode: replicated
+      replicas: 5
+    links:
+      - uid-app
+
+
+volumes:
+  app-data:
